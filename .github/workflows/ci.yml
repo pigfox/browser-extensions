@@ -34,3 +34,4 @@ jobs:
           name: extension-zips
           path: extensions/*/.output/*.zip
           if-no-files-found: error
+          include-hidden-files: true
