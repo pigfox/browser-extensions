@@ -8,3 +8,5 @@ Open-source browser extensions by Pigfox LLC. See https://pigfox.com.
 - **Contract Safety Check — by Pigfox**: quick facts on any 0x contract address on a page
 
 No tracking, no accounts, no data collection.
+
+License: MIT
