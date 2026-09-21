@@ -10,3 +10,7 @@ Open-source browser extensions by Pigfox LLC. See https://pigfox.com.
 No tracking, no accounts, no data collection.
 
 License: MIT
+
+## Toolchain notes
+
+TypeScript is held at 6.0.x because typescript-eslint 8.70 supports TypeScript below 6.1; upgrade both together.

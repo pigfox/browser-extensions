@@ -12,7 +12,9 @@
     "lint": "eslint .",
     "test": "vitest run --coverage",
     "build": "pnpm -r --filter \"./extensions/*\" build",
-    "zip": "pnpm -r --filter \"./extensions/*\" zip"
+    "zip": "pnpm -r --filter \"./extensions/*\" zip",
+    "verify:sources": "scripts/verify-sources-zips.sh",
+    "lint:firefox": "scripts/lint-firefox-zips.sh"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -23,6 +25,7 @@
     "happy-dom": "^20.14.5",
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.70.0",
-    "vitest": "^5.0.1"
+    "vitest": "^5.0.1",
+    "web-ext": "^10.6.0"
   }
 }

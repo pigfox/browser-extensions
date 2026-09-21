@@ -28,6 +28,8 @@ jobs:
       - run: pnpm test
       - run: pnpm build
       - run: pnpm zip
+      - run: pnpm lint:firefox
+      - run: pnpm verify:sources
 
       - uses: actions/upload-artifact@v7
         with:
