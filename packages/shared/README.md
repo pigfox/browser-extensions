@@ -1,6 +1,6 @@
 # Shared
 
-Shared badge UI, branding, and settings used by all four extensions.
+Shared badge UI, branding, and settings used by all the extensions.
 
 Currently provides the Pigfox brand constants and `buildPigfoxLink`, which builds
 pigfox.com links tagged with `utm_source=<extension-name>` and
