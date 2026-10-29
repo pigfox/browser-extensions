@@ -188,6 +188,9 @@ function videoHeader(transcript: Transcript): string {
 export async function summarizeTranscript(transcript: Transcript, options: SummarizeOptions): Promise<Summary> {
   const client = new Anthropic({
     apiKey: options.apiKey,
+    // SDK 1.x sends apiKey as "Authorization: Bearer"; console API keys go in x-api-key.
+    // defaultHeaders are applied after the SDK's auth headers, and null removes a header.
+    defaultHeaders: { 'x-api-key': options.apiKey, Authorization: null },
     dangerouslyAllowBrowser: true,
     ...(options.fetch && { fetch: options.fetch }),
   });

@@ -165,7 +165,8 @@ describe('summarizeTranscript', () => {
     const [url, init] = fetchFn.mock.calls[0] ?? [];
     expect(String(url)).toBe('https://api.anthropic.com/v1/messages');
     const headers = new Headers(init?.headers);
-    expect(headers.get('authorization')).toBe(`Bearer ${FAKE_KEY}`);
+    expect(headers.get('x-api-key')).toBe(FAKE_KEY);
+    expect(headers.has('authorization')).toBe(false);
     expect(headers.get('anthropic-dangerous-direct-browser-access')).toBe('true');
 
     const body = requestBody(fetchFn, 0);
