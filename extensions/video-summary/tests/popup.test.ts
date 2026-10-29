@@ -54,7 +54,7 @@ describe('popup frame', () => {
   it('shows the store name, an Options button and the Pigfox link', async () => {
     const api = videoApi();
     await renderPopup(root, api);
-    expect(root.querySelector('h1')?.textContent).toBe('Video Summary — by Pigfox');
+    expect(root.querySelector('h1')?.textContent).toBe('Skip the Video — by Pigfox');
     const link = root.querySelector('footer a') as HTMLAnchorElement;
     expect(link.textContent).toBe('by Pigfox');
     expect(link.href).toBe(EXPECTED_LINK);

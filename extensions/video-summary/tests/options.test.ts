@@ -26,7 +26,7 @@ describe('options page', () => {
   it('renders the form with branding and no saved key', async () => {
     await renderOptions(root, fakeStorage());
     const { input, clear, select, keyStatus } = parts();
-    expect(root.querySelector('h1')?.textContent).toBe('Video Summary — by Pigfox: Options');
+    expect(root.querySelector('h1')?.textContent).toBe('Skip the Video — by Pigfox: Options');
     expect(input.type).toBe('password');
     expect(input.value).toBe('');
     expect(keyStatus).toBe('No key saved yet.');

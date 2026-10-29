@@ -44,7 +44,7 @@ describe('entrypoints', () => {
     vi.mocked(api.current.tabs.query).mockResolvedValue([]);
     await import('../entrypoints/popup/main');
     await flush();
-    expect(document.body.querySelector('h1')?.textContent).toBe('Video Summary — by Pigfox');
+    expect(document.body.querySelector('h1')?.textContent).toBe('Skip the Video — by Pigfox');
   });
 
   it('options page renders into the document body', async () => {

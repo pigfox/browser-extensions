@@ -6,7 +6,8 @@ export default defineConfig({
   manifestVersion: 3,
   manifest: ({ browser }) => ({
     name: STORE_NAME,
-    description: 'Summarizes YouTube videos with Claude: the key points, what to skip, and the time it saves.',
+    description:
+      'Get the key points of any YouTube video in seconds, with timestamps, a list of parts you can skip, and the time it saves you.',
     permissions: ['storage'],
     host_permissions: ['https://api.anthropic.com/*'],
     ...(browser === 'firefox' && {

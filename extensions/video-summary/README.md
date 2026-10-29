@@ -1,6 +1,7 @@
-# Video Summary — by Pigfox
+# Skip the Video — by Pigfox
 
-Working name; the store name is not final.
+The directory and package are named `video-summary`; the Firefox add-on ID is
+`video-summary@pigfox.com`.
 
 On a YouTube video page, click the extension to get:
 
@@ -58,4 +59,34 @@ Nothing is sent to Pigfox.
 ```sh
 pnpm build   # Chrome + Firefox, output in .output/
 pnpm zip     # store-ready zips in .output/
+```
+
+## Store listing
+
+Approved by Peter on 2026-10-29. Not submitted to any store yet.
+
+**Name:** Skip the Video — by Pigfox
+
+**Short description** (the manifest `description`):
+
+> Get the key points of any YouTube video in seconds, with timestamps, a list of parts you can skip, and the time it saves you.
+
+**Long description:**
+
+```text
+Skip the Video turns a YouTube video into a one-minute read.
+
+Open any video, click the icon, and get:
+- A one-paragraph summary
+- The key points, each with a timestamp that jumps straight to that moment
+- The parts you can skip: intros, sponsor reads, repetition and outros
+- How much time it saves you
+
+It reads the video's own captions and summarizes them with Claude, using your own Anthropic API key, which stays in your browser. Summaries are saved, so opening the same video again is instant and free.
+
+Videos without captions can't be summarized; the extension tells you instead of guessing.
+
+Privacy: the video's transcript and title are sent to Anthropic to make the summary. Nothing else is collected, and nothing is sent to Pigfox.
+
+Made by Pigfox — https://pigfox.com
 ```
